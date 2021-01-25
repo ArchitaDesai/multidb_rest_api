@@ -78,7 +78,7 @@ class CoreView(APIView):
         try:
             queryset = self.get_queryset(request.data)
         except:
-            error_message = "Error 404, Couldn't find the specified data. Please try changing parameters."
+            error_message = "Error 404, Couldn't find the specified data. Please try changing the input data."
             raise NotFound(error_message)
 
         if not('select_list' in table_data or 'aggregate' in table_data or 'groupby' in table_data): 
